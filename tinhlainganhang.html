@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <input type="number"  id="sotien" placeholder="Nhập số tiền ban đầu">
+            <input type="number"  id="sothang" placeholder="Nhập số tháng">
+            <input type="number"  id="solai" placeholder="Nhập % số lãi">
+        </tr>
+        <button onclick="KiemTra()">Check</button><br>
+        <h3> Hiện kết quả:</h3>
+        <p id="result">Hiện kết quả ở đây!</p>
+        <script>
+            function KiemTra(){
+                let a = document.getElementById("sotien").value;
+                let b = document.getElementById("sothang").value;
+                let c = document.getElementById("solai").value;
+                let x = a*(1 + b*c);
+                let result;
+                document.getElementById("result").innerHTML=x + " " + "VNĐ" ;
+            }
+        </script>  
+    </table>
+  
+</body>
+</html>
